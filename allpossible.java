@@ -11,7 +11,7 @@ public class allpossible {
 		String str = "qploresinazxrhqknhoilerthf";
 		String patcher = null;
 		String shortest = null;
-		int shortestwindow = 10;
+		int shortestwindow = str.length();
 		
 		ArrayList <String> sString = new ArrayList();
 		List<Character> characters = Arrays.asList('l','i','o','n');
@@ -24,7 +24,6 @@ public class allpossible {
 				sString.add(patcher);
 				
 				}
-			
 			}
 		
 		
@@ -33,7 +32,7 @@ public class allpossible {
 			String temp = sString.get(i);
 			for (int j = 0; j < temp.length(); j++) {
 				
-				if(characters.contains(temp.toCharArray())) {
+				if(characters.contains(temp.charAt(j))) {
 					if(temp.length()<shortestwindow) {
 						
 						shortestwindow=temp.length();
